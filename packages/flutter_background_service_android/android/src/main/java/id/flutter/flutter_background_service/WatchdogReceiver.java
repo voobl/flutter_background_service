@@ -1,4 +1,3 @@
-import android.util.Log;
 package id.flutter.flutter_background_service;
 
 import static android.content.Context.ALARM_SERVICE;
@@ -89,7 +88,6 @@ public class WatchdogReceiver extends BroadcastReceiver {
                     if (config.isForeground()) {
                         ContextCompat.startForegroundService(context, new Intent(context, id.flutter.flutter_background_service.BackgroundService.class));
                     } else {
-                     //   context.getApplicationContext().startService(new Intent(context, id.flutter.flutter_background_service.BackgroundService.class));
                     }}
                 catch (Exception e){
                     e.printStackTrace();
